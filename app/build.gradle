@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
-
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'com.android.databinding'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -21,6 +22,9 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+    dataBinding{
+        enabled=true
+    }
 }
 project.ext {
     rxJavaVersion = "2.1.0"
@@ -32,7 +36,7 @@ project.ext {
     glideVersion = "4.9.0"
     navVersion = "2.2.0"
     daggerVersion = "2.27"
-    multidex = "1.0.3"
+    multidex = "2.0.1"
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -56,7 +60,7 @@ dependencies {
     implementation "com.google.dagger:dagger-android:$project.daggerVersion"
     implementation "com.google.dagger:dagger-android-support:$project.daggerVersion"
     annotationProcessor "com.google.dagger:dagger-android-processor:$project.daggerVersion"
-
+    implementation "com.google.code.gson:gson:2.8.5"
     implementation "com.android.support:multidex:$project.multidex"
 
 
