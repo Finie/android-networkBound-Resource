@@ -1,6 +1,8 @@
 package com.tospay.nbresource.di.builder;
 
 import com.tospay.nbresource.BaseApplication;
+import com.tospay.nbresource.ui.activities.HomeActivity;
+
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
@@ -8,6 +10,7 @@ import dagger.android.ContributesAndroidInjector;
 public abstract class ActivityBuilder {
 
     @ContributesAndroidInjector
-    abstract BaseApplication bindBaseApplication();
+    abstract HomeActivity bindHomeActivity();
+
 
 }

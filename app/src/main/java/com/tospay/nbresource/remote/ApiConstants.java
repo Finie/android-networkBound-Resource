@@ -20,7 +20,7 @@ public class ApiConstants {
     /**
      * Gateway Endpoint
      */
-    public static final String BASE_URL = "http://kpa-api.tospay.net:3060/api/";
+    public static final String BASE_URL = "http://192.168.88.14:3080/api/v1/";
 
     /**
      * Notification Endpoint

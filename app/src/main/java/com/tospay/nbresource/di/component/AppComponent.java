@@ -19,6 +19,7 @@ import dagger.android.AndroidInjector;
         ActivityBuilder.class,
         FragmentBuilder.class
 })
+
 public interface AppComponent extends AndroidInjector<BaseApplication> {
 
     @Component.Builder

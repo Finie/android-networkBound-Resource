@@ -9,6 +9,7 @@ import android.os.Bundle;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.security.ProviderInstaller;
+import com.tospay.nbresource.di.component.DaggerAppComponent;
 
 import java.security.KeyManagementException;
 import java.security.NoSuchAlgorithmException;
@@ -45,8 +46,13 @@ public class BaseApplication extends DaggerApplication {
         }
     }
 
+
     @Override
     protected AndroidInjector<? extends DaggerApplication> applicationInjector() {
-        return null;
+        return DaggerAppComponent.builder().create(this);
+    }
+
+    public static synchronized BaseApplication getInstance() {
+        return sInstance;
     }
 }

@@ -18,7 +18,7 @@ import static com.tospay.nbresource.remote.ApiConstants.CONNECT_TIMEOUT;
 import static com.tospay.nbresource.remote.ApiConstants.READ_TIMEOUT;
 import static com.tospay.nbresource.remote.ApiConstants.WRITE_TIMEOUT;
 
-public class ServiceGenerator {
+public class SgrServiceGenerator {
 
     /**
      * Logs network requests
